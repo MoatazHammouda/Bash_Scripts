@@ -26,7 +26,7 @@ if [ "$TASKS" == "stream" ]
 	then
 		echo "Normal Stream"
 		pwd
-		cd /home/pi/Apps/MetaBase
+		cd /home/pi/Apps/MetaBase-Node-Mo
 		sudo node app.js --config /home/pi/Desktop/Configs/metabase-config.json -o /home/pi/Desktop/MetaBase-CSV-Bash-Stream
 		pwd
 
@@ -36,7 +36,7 @@ if [ "$TASKS" == "stream_no_graph" ]
 	then
 		echo "No Graph Stream"
 		pwd
-		cd /home/pi/Apps/MetaBase
+		cd /home/pi/Apps/MetaBase-Node-Mo
 		sudo node app.js --config /home/pi/Desktop/Configs/metabase-config.json --no-graph -o /home/pi/Desktop/MetaBase-CSV-Bash-Stream
 		pwd
 
@@ -47,7 +47,7 @@ if [ "$TASKS" == "log_normal" ]
 	then
 		echo "Normal Log"
 		pwd
-		cd /home/pi/Apps/MetaBase
+		cd /home/pi/Apps/MetaBase-Node-Mo
 		sudo node app.js --config /home/pi/Desktop/Configs/metabase-config_log.json -o /home/pi/Desktop/MetaBase-CSV-Bash
 		pwd
 
@@ -57,11 +57,11 @@ if [ "$TASKS" == "download_normal" ]
 	then
 		echo "Download Log"
 		pwd
-		cd /home/pi/Apps/MetaBase
+		cd /home/pi/Apps/MetaBase-Node-Mo
 		echo "Running Code"
 		sudo node app.js --config /home/pi/Desktop/Configs/metabase-config_download.json -o /home/pi/Desktop/MetaBase-CSV-Bash
 		cd /home/pi/Desktop/Synchronize_Data/
-		sudo python3 synchronize_files_ucl.py
+		sudo python3 sync_2_legs.py
 		pwd
 
 fi 
@@ -70,7 +70,7 @@ if [ "$TASKS" == "log_quaternion" ]
 	then
 		echo "Log Quaternion"
 		pwd
-		cd /home/pi/Apps/MetaBase
+		cd /home/pi/Apps/MetaBase-Node-Mo
 		echo "Running Code"
 		sudo node app.js --config /home/pi/Desktop/Configs/metabase-config_quaternion_log.json -o /home/pi/Desktop/MetaBase-CSV-Bash-Quat
 		pwd
@@ -80,7 +80,7 @@ if [ "$TASKS" == "download_quaternion" ]
 	then
 		echo "Download Quaternion"
 		pwd
-		cd /home/pi/Apps/MetaBase
+		cd /home/pi/Apps/MetaBase-Node-Mo
 		echo "Running Code"
 		sudo node app.js --config /home/pi/Desktop/Configs/metabase-config_quaternion_download.json -o /home/pi/Desktop/MetaBase-CSV-Bash-Quat
 		pwd
