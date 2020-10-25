@@ -26,7 +26,7 @@ if [ "$TASKS" == "stream" ]
 	then
 		echo "Normal Stream"
 		pwd
-		cd /home/pi/Apps/MetaBase
+		cd /home/pi/Apps/MetaBase-Node-Mo
 		sudo node app.js --config /home/pi/Desktop/Configs_Test/metabase-config.json -o /home/pi/Desktop/MetaBase-CSV-Bash-Stream-Test
 		pwd
 
@@ -36,8 +36,8 @@ if [ "$TASKS" == "stream_no_graph" ]
 	then
 		echo "No Graph Stream"
 		pwd
-		cd /home/pi/Apps/MetaBase
-		sudo node app.js --config /home/pi/Desktop/Configs_Test//metabase-config.json --no-graph -o /home/pi/Desktop/MetaBase-CSV-Bash-Stream-Test
+		cd /home/pi/Apps/MetaBase-Node-Mo
+		sudo node app.js --config /home/pi/Desktop/Configs_Test/metabase-config.json --no-graph -o /home/pi/Desktop/MetaBase-CSV-Bash-Stream-Test
 		pwd
 
 fi 
@@ -47,8 +47,8 @@ if [ "$TASKS" == "log_normal" ]
 	then
 		echo "Normal Log"
 		pwd
-		cd /home/pi/Apps/MetaBase
-		sudo node app.js --config /home/pi/Desktop/Configs_Test//metabase-config_log.json -o /home/pi/Desktop/MetaBase-CSV-Bash-Test
+		cd /home/pi/Apps/MetaBase-Node-Mo
+		sudo node app.js --config /home/pi/Desktop/Configs_Test/metabase-config_log.json -o /home/pi/Desktop/MetaBase-CSV-Bash-Test
 		pwd
 
 fi 
@@ -57,7 +57,7 @@ if [ "$TASKS" == "download_normal" ]
 	then
 		echo "Download Log"
 		pwd
-		cd /home/pi/Apps/MetaBase
+		cd /home/pi/Apps/MetaBase-Node-Mo
 		echo "Running Code"
 		sudo node app.js --config /home/pi/Desktop/Configs_Test/metabase-config_download.json -o /home/pi/Desktop/MetaBase-CSV-Bash-Test
 		cd /home/pi/Desktop/Synchronize_Data/
@@ -70,9 +70,9 @@ if [ "$TASKS" == "log_quaternion" ]
 	then
 		echo "Log Quaternion"
 		pwd
-		cd /home/pi/Apps/MetaBase
+		cd /home/pi/Apps/MetaBase-Node-Mo
 		echo "Running Code"
-		sudo node app.js --config /home/pi/Desktop/Configs/metabase-config_quaternion_log.json -o /home/pi/Desktop/MetaBase-CSV-Bash-Test
+		sudo node app.js --config /home/pi/Desktop/Configs_Test/metabase-config_quaternion_log.json -o /home/pi/Desktop/MetaBase-CSV-Bash-Quat-Test
 		pwd
 fi
 
@@ -80,9 +80,9 @@ if [ "$TASKS" == "download_quaternion" ]
 	then
 		echo "Download Quaternion"
 		pwd
-		cd /home/pi/Apps/MetaBase
+		cd /home/pi/Apps/MetaBase-Node-Mo
 		echo "Running Code"
-		sudo node app.js --config /home/pi/Desktop/Configs/metabase-config_quaternion_download.json -o /home/pi/Desktop/MetaBase-CSV-Bash-Test
+		sudo node app.js --config /home/pi/Desktop/Configs_Test/metabase-config_quaternion_download.json -o /home/pi/Desktop/MetaBase-CSV-Bash-Quat-Test
 		pwd
 
 fi
